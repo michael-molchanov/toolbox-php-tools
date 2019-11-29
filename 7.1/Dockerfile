@@ -1,4 +1,4 @@
-FROM michaeltigr/toolbox-php:7.1-0.1.10
+FROM michaeltigr/toolbox-php:7.1-0.1.11
 
 LABEL maintainer "Michael Molchanov <mmolchanov@adyax.com>"
 
