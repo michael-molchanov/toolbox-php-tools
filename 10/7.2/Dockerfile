@@ -18,4 +18,4 @@ RUN apk add --update --no-cache libuv nodejs npm nodejs-dev yarn \
 # Install compass.
 RUN apk add --update --no-cache ruby ruby-dev \
   && rm -rf /var/cache/apk/* \
-  && gem install --no-ri --no-rdoc compass
+  && gem install --no-document compass
