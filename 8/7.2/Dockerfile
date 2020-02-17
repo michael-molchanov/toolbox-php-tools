@@ -14,24 +14,29 @@ RUN echo '[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion" # Th
 
 # Install dependencies.
 RUN apk add --update --no-cache \
-  libuv \
-  libuv-dev \
-  curl \
   bash \
+  binutils \
   ca-certificates \
-  openssl \
-  ncurses \
   coreutils \
-  python2 \
-  make \
+  curl \
+  findutils \
   gcc \
   g++ \
-  libgcc \
-  linux-headers \
+  gifsicle \
   grep \
+  libgcc \
+  libjpeg-turbo-utils \
+  libuv \
+  libuv-dev \
+  linux-headers \
+  make \
+  nasm \
+  ncurses \
+  openssl \
+  optipng \
+  python2 \
   util-linux \
-  binutils \
-  findutils \
+  zlib-dev \
   && rm -rf /var/cache/apk/*
 
 RUN mkdir -p $NVM_DIR
