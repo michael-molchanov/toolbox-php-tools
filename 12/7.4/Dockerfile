@@ -1,4 +1,4 @@
-FROM michaeltigr/toolbox-php:7.2-0.2.1.3
+FROM michaeltigr/toolbox-php:7.4-0.2.1.3
 
 LABEL maintainer "Michael Molchanov <mmolchanov@adyax.com>"
 
@@ -32,7 +32,7 @@ RUN apk add --update --no-cache \
   && rm -rf /var/cache/apk/*
 
 # Install nodejs and grunt.
-RUN apk add --update --no-cache libuv nodejs npm nodejs-dev yarn \
+RUN apk add --update --no-cache libuv nodejs-current npm nodejs-current-dev yarn \
   && rm -rf /var/cache/apk/* \
   && npm install -g gulp-cli grunt-cli bower \
   && node --version \
