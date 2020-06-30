@@ -45,11 +45,11 @@ RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | b
 
 RUN source $NVM_DIR/nvm.sh \
   && source $NVM_DIR/nvm.sh \
-  && nvm install -s v10.21.0 \
-  && nvm alias default v10.21.0 \
+  && nvm install -s v14.4.0 \
+  && nvm alias default v14.4.0 \
   && nvm use --delete-prefix default
 
-ENV PATH $HOME/.yarn/bin:$HOME/.nvm/versions/node/v10.21.0/bin:$PATH
+ENV PATH $HOME/.yarn/bin:$HOME/.nvm/versions/node/v14.4.0/bin:$PATH
 
 RUN source $NVM_DIR/nvm.sh \
   && npm install -g gulp-cli grunt-cli bower \
