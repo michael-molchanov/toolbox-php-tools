@@ -1,4 +1,4 @@
-FROM michaeltigr/toolbox-php:7.3-0.2.1.5
+FROM michaeltigr/toolbox-php:7.3-0.2.1.6
 
 LABEL maintainer "Michael Molchanov <mmolchanov@adyax.com>"
 
@@ -41,15 +41,15 @@ RUN apk add --update --no-cache \
 
 RUN mkdir -p $NVM_DIR
 
-RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 
 RUN source $NVM_DIR/nvm.sh \
   && source $NVM_DIR/nvm.sh \
-  && nvm install -s v12.18.2 \
-  && nvm alias default v12.18.2 \
+  && nvm install -s v12.20.2 \
+  && nvm alias default v12.20.2 \
   && nvm use --delete-prefix default
 
-ENV PATH $HOME/.yarn/bin:$HOME/.nvm/versions/node/v12.18.2/bin:$PATH
+ENV PATH $HOME/.yarn/bin:$HOME/.nvm/versions/node/v12.20.2/bin:$PATH
 
 RUN source $NVM_DIR/nvm.sh \
   && npm install -g gulp-cli grunt-cli bower \

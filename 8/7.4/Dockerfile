@@ -1,4 +1,4 @@
-FROM michaeltigr/toolbox-php:7.4-0.2.1.5
+FROM michaeltigr/toolbox-php:7.4-0.2.1.6
 
 LABEL maintainer "Michael Molchanov <mmolchanov@adyax.com>"
 
@@ -41,7 +41,7 @@ RUN apk add --update --no-cache \
 
 RUN mkdir -p $NVM_DIR
 
-RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 
 RUN source $NVM_DIR/nvm.sh \
   && source $NVM_DIR/nvm.sh \
