@@ -41,7 +41,7 @@ RUN echo 'export NVM_DIR="/usr/local/nvm"' >> /etc/profile.d/nvm.sh \
 RUN mkdir -p ${NVM_DIR} \
     && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 
-ENV NODE_VERSION v14.16.0
+ENV NODE_VERSION v15.11.0
 ENV PATH /usr/local/nvm/versions/node/${NODE_VERSION}/bin:${PATH}
 
 RUN source ${NVM_DIR}/nvm.sh \
