@@ -1,4 +1,4 @@
-FROM michaeltigr/toolbox-php:7.1-0.2.1.8
+FROM michaeltigr/toolbox-php:7.1-0.2.1.9
 
 LABEL maintainer "Michael Molchanov <mmolchanov@adyax.com>"
 
@@ -39,7 +39,7 @@ RUN echo 'export NVM_DIR="/usr/local/nvm"' >> /etc/profile.d/nvm.sh \
     && echo '[ -s "${NVM_DIR}/bash_completion" ] && . "${NVM_DIR}/bash_completion" # This loads nvm bash_completion' >> /etc/profile.d/nvm.sh
 
 RUN mkdir -p ${NVM_DIR} \
-    && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+    && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 
 ENV NODE_VERSION v8.17.0
 ENV PATH /usr/local/nvm/versions/node/${NODE_VERSION}/bin:${PATH}
